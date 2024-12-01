@@ -1,70 +1,94 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rick and Morty React App (Dockerized)
 
-## Available Scripts
+A React project that consumes the Rick and Morty API, containerized with Docker for easy deployment. This project allows you to explore characters, episodes, and locations from the series.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these steps to clone, build, and run the application in a Docker container.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Make sure you have [Docker](https://www.docker.com/) installed on your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Cloning the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get started, clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Alkon12/rick-and-morty-dockerized-react.git
+cd rick-and-morty-dockerized-react
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Building the Docker Image
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To build the Docker image for the application, run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+docker build -t react-app .
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This command creates a Docker image named `react-app`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🏃 Running the Docker Container
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+After building the image, you can run the application using:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+docker run -p 3000:80 react-app
+```
 
-### Code Splitting
+- The application will be accessible at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📖 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+rick-and-morty-dockerized-react/
+├── src/              # Source code for the React app
+├── public/           # Public assets
+├── Dockerfile        # Docker configuration
+├── package.json      # Project dependencies
+└── README.md         # Project documentation
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌟 Features
 
-### Advanced Configuration
+- **API Integration**: Fetches and displays data from the Rick and Morty API.
+- **Dockerized**: Simple deployment using Docker.
+- **React-Based**: A modern, interactive UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🛠️ Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [React](https://reactjs.org/) - Frontend library.
+- [Docker](https://www.docker.com/) - Containerization tool.
+- [Rick and Morty API](https://rickandmortyapi.com/) - API for fetching show data.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit a pull request or open an issue.
+
+---
+
+Made with ❤️ by [Alkon12](https://github.com/Alkon12).
